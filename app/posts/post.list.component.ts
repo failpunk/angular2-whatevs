@@ -1,15 +1,15 @@
 import { Component, OnInit } from 'angular2/core';
 
-import { PostDetailComponent } from './post.detail.component';
+import { PostListDetailComponent } from './post.list.detail.component';
 import { Post, PostService } from '../services/post.service';
 
 @Component({
     selector: 'post-list',
-    directives: [PostDetailComponent],
+    directives: [PostListDetailComponent],
     providers: [PostService],
     template: `
     <div>
-        <post-detail *ngFor="#post of posts" [post]="post"></post-detail>
+        <post-list-detail *ngFor="#post of posts" [post]="post"></post-list-detail>
     </div>
     `,
 })

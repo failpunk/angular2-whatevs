@@ -3,6 +3,7 @@ import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/route
 import { HTTP_PROVIDERS } from 'angular2/http';
 
 import { AppPostsComponent } from './posts/posts.component';
+import { PostDetailComponent } from './posts/post.detail.component';
 import { AppUsersComponent } from './users/users.component';
 
 @Component({
@@ -26,6 +27,7 @@ import { AppUsersComponent } from './users/users.component';
 })
 @RouteConfig([
     {path: '/posts', as: 'Posts', component: AppPostsComponent, useAsDefault: true},
+    {path: '/posts/:id', name: 'PostDetail', component: PostDetailComponent},
     {path: '/users', as: 'Users', component: AppUsersComponent}
 ])
 

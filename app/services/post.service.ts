@@ -20,8 +20,8 @@ export class PostService {
             .map((response) => response.json());
     }
 
-    //getCharacter(id: number) {
-    //    return this._http.get('characters.json')
-    //        .map((response) => response.json().filter((c: Character) => c.id === id)[0]);
-    //}
+    getPost(id: number) {
+        return this._http.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
+            .map((response) => response.json());
+    }
 }
