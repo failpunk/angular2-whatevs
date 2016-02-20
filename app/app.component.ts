@@ -1,23 +1,32 @@
 import { Component } from 'angular2/core';
-import { HTTP_PROVIDERS } from 'angular2/http';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
 
-import { CharactersComponent } from './characters.component';
-import { DashboardComponent } from './dashboard.component';
-import { CharacterService } from './character.service';
+import { AppPostsComponent } from './posts/posts.component';
+import { AppUsersComponent } from './users/users.component';
 
 @Component({
-  selector: 'my-app',
-  template: `
-    <a [routerLink]="['Dashboard']">Dashboard</a>
-    <a [routerLink]="['Characters']">Characters</a>
+    selector: 'my-app',
+    directives: [ROUTER_DIRECTIVES],
+    providers: [ROUTER_PROVIDERS],
+    template: `
+    <div class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item">
+                <a [routerLink]="['Posts']" class="pure-menu-link">Posts</a>
+            </li>
+            <li class="pure-menu-item">
+                <a [routerLink]="['Users']" class="pure-menu-link">Users</a>
+            </li>
+        </ul>
+    </div>
+
     <router-outlet></router-outlet>
     `,
-  directives: [ROUTER_DIRECTIVES],
-  providers: [HTTP_PROVIDERS, ROUTER_PROVIDERS, CharacterService]
 })
 @RouteConfig([
-  { path: '/dashboard', as: 'Dashboard', component: DashboardComponent, useAsDefault: true },
-  { path: '/characters', as: 'Characters', component: CharactersComponent }
+    {path: '/posts', as: 'Posts', component: AppPostsComponent, useAsDefault: true},
+    {path: '/users', as: 'Users', component: AppUsersComponent}
 ])
-export class AppComponent { }
+
+export class AppComponent {
+}

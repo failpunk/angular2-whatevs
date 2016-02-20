@@ -1,0 +1,42 @@
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.topic-header {
+  font-weight: 300;
+  font-size: 48px;
+  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 15px;
+}
+
+.topic-subheader {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #c2c8cc;
+  margin-bottom: 40px;
+}
+
+.pure-menu-list {
+  float: right;
+}
+
+post-detail {
+  display: block;
+  margin-bottom: 40px;
+
+  .post-title {
+    font-weight: 400;
+    font-size: 24px;
+    color: #888;
+  }
+
+  .post-body {
+    font-size: 18px;
+    color: #777;
+    font-weight: 300;
+  }
+}
+
