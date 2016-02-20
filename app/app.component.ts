@@ -1,5 +1,6 @@
 import { Component } from 'angular2/core';
 import { RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from 'angular2/router';
+import { HTTP_PROVIDERS } from 'angular2/http';
 
 import { AppPostsComponent } from './posts/posts.component';
 import { AppUsersComponent } from './users/users.component';
@@ -7,7 +8,7 @@ import { AppUsersComponent } from './users/users.component';
 @Component({
     selector: 'my-app',
     directives: [ROUTER_DIRECTIVES],
-    providers: [ROUTER_PROVIDERS],
+    providers: [HTTP_PROVIDERS, ROUTER_PROVIDERS],
     template: `
     <div class="pure-menu pure-menu-horizontal">
         <ul class="pure-menu-list">

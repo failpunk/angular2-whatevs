@@ -18,6 +18,9 @@
 
 .pure-menu-list {
   float: right; }
+  .pure-menu-list .pure-menu-link.router-link-active {
+    background-color: #1F8DD6;
+    color: white; }
 
 post-detail {
   display: block;
