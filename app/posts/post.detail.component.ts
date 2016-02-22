@@ -20,7 +20,7 @@ import { Post, PostService } from '../services/post.service';
 })
 
 export class PostDetailComponent implements OnInit {
-
+    id: string;
     post: Post;
 
     constructor(private routeParams: RouteParams, private PostService: PostService) {
