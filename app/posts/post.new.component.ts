@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import { FORM_DIRECTIVES, FormBuilder, ControlGroup, Validators } from 'angular2/common';
+import { FORM_DIRECTIVES, FormBuilder, ControlGroup, Validators, Control } from 'angular2/common';
 
 @Component({
     selector: 'new-post',
@@ -46,13 +46,22 @@ export class NewPostComponent {
     postForm;
 
     constructor(fb:FormBuilder) {
+        let titleValidators = Validators.compose([Validators.required, this.mustBeJustin]);
+
         this.postForm = fb.group({
-            'title': ['', Validators.required],
+            'title': ['', titleValidators],
             'body': ['']
         });
     }
 
     onSubmit(formValues: string[]) {
         console.log('FORM VALUES', formValues);
+    }
+
+    mustBeJustin(control: Control): { [s: string]: boolean } {
+        debugger;
+        if (!control.value.toLowerCase().match(/^justin/)) {
+            return {mustBeJustin: true};
+        }
     }
 }
