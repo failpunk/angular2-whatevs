@@ -18,7 +18,7 @@ import { FORM_DIRECTIVES, FormBuilder, ControlGroup, Validators } from 'angular2
                 <input
                     id="title"
                     type="text"
-                    placeholder="Enter the post title"
+                    placeholder="Enter the post title textg"
                     [ngFormControl]="postForm.controls['title']">
             </div>
 
@@ -26,7 +26,7 @@ import { FORM_DIRECTIVES, FormBuilder, ControlGroup, Validators } from 'angular2
                 <label for="body">Body</label>
                 <textarea
                     id="body"
-                    placeholder="Enter the post body"
+                    placeholder="Enter the post body text"
                     [ngFormControl]="postForm.controls['body']">
                 </textarea>
             </div>
