@@ -24,4 +24,14 @@ export class PostService {
         return this._http.get(`http://jsonplaceholder.typicode.com/posts/${id}`)
             .map((response) => response.json());
     }
+
+    createPost(title: string, body: string) {
+        return this._http.post(
+            'http://jsonplaceholder.typicode.com/posts',
+            JSON.stringify({
+                body: body,
+                title: title,
+                userId: 1
+            }))
+    }
 }

@@ -1,4 +1,8 @@
 $border: 0.0625rem solid rgba(0, 0, 0, 0.1);
+$success: rgb(28, 184, 65);
+$secondary: rgb(66, 184, 221);
+$warning: rgb(223, 117, 20);
+$error: rgb(202, 60, 60);
 
 .container {
   margin: 0 auto;
@@ -32,6 +36,18 @@ $border: 0.0625rem solid rgba(0, 0, 0, 0.1);
   }
 }
 
+.pure-button {
+  color: white;
+
+  &.error {
+    background: $error;
+  }
+
+  &.warning {
+    background: $warning;
+  }
+}
+
 post-detail {
   display: block;
   margin-bottom: 40px;
@@ -61,7 +77,7 @@ user-detail {
   padding-left: 0.3em;
 
   &.error {
-    color: rgb(202, 60, 60);
+    color: $error;
   }
 }
 
