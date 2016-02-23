@@ -54,3 +54,20 @@ user-detail {
   display: block;
   border-bottom: $border;
 }
+
+.pure-form-text {
+  margin-left: 11em;
+  margin-top: 0.5em;
+  padding-left: 0.3em;
+
+  &.error {
+    color: rgb(202, 60, 60);
+  }
+}
+
+.form-invalid {
+  float: right;
+  color: rgb(202, 60, 60);
+  border: 1px solid rgb(202, 60, 60);
+  padding: 1em;
+}

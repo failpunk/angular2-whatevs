@@ -37,3 +37,16 @@ post-detail {
 user-detail {
   display: block;
   border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.1); }
+
+.pure-form-text {
+  margin-left: 11em;
+  margin-top: 0.5em;
+  padding-left: 0.3em; }
+  .pure-form-text.error {
+    color: #ca3c3c; }
+
+.form-invalid {
+  float: right;
+  color: #ca3c3c;
+  border: 1px solid #ca3c3c;
+  padding: 1em; }
