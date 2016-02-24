@@ -4,7 +4,7 @@
 
 1. `npm i`
 
-1. Run the TypeScript compiler, watch for changes, start the server, and launch the browser `npm start`
+1. `npm start` - Runs the TypeScript compiler, watch for changes (ts and scss), starts the server
 
 # angular2-whatevs
 
